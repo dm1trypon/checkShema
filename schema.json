@@ -1,0 +1,144 @@
+{
+    "properties": {
+        "commands": {
+            "properties": {
+                "get_update": {
+                    "properties": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "type": "array"
+                },
+                "kind": {
+                    "properties": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "type": "array"
+                },
+                "reboot": {
+                    "properties": [
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "type": "array"
+                },
+                "shell": {
+                    "properties": [
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "type": "array"
+                },
+                "xorg": {
+                    "properties": [
+                        {
+                            "type": "string"
+                        },
+                        {
+                            "type": "string"
+                        }
+                    ],
+                    "type": "array"
+                }
+            },
+            "require": [
+                "get_update",
+                "kind",
+                "reboot",
+                "shell",
+                "xorg"
+            ],
+            "type": {
+                "type": "object"
+            }
+        },
+        "dependence": {
+            "properties": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "type": "array"
+        },
+        "mariadb": {
+            "properties": {
+                "db_host": {
+                    "type": "string"
+                },
+                "db_pass": {
+                    "type": "string"
+                },
+                "db_port": {
+                    "type": "number"
+                },
+                "db_user": {
+                    "type": "string"
+                }
+            },
+            "require": [
+                "db_host",
+                "db_pass",
+                "db_port",
+                "db_user"
+            ],
+            "type": {
+                "type": "object"
+            }
+        },
+        "service": {
+            "properties": {
+                "ex_port": {
+                    "type": "number"
+                },
+                "port": {
+                    "type": "number"
+                }
+            },
+            "require": [
+                "ex_port",
+                "port"
+            ],
+            "type": {
+                "type": "object"
+            }
+        },
+        "support_kinds": {
+            "properties": [
+                {
+                    "type": "string"
+                },
+                {
+                    "type": "string"
+                }
+            ],
+            "type": "array"
+        }
+    },
+    "require": [
+        "commands",
+        "dependence",
+        "mariadb",
+        "service",
+        "support_kinds"
+    ],
+    "type": {
+        "type": "object"
+    }
+}

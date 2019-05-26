@@ -1,0 +1,17 @@
+{
+    "type": "object",
+    "require": ["one", "two", "three"],
+    "propertis": {
+        "one": {"type": "string"},
+        "two": {"type": "number"},
+        "three": {
+            "type": "object",
+            "require": ["one", "two", "three"],
+            "propertis": {
+                "one": {"type": "string"},
+                "two": {"type": "number"},
+                "three": {"type": "number"}
+            }
+        }
+    }
+}
